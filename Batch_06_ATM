@@ -1,0 +1,31 @@
+class ATM:
+  def __init__(self,name,balance):
+    self.name = name
+    self.balance = balance
+  def check_balance(self):
+    message = f"Account: {self.name}, Balance: {self.balance} THB"
+    print(message)
+  def deposit(self,money):
+    self.balance += money
+    print(f"New Balance: {self.balance} THB")
+    print("Deposit successfully.")
+  def change_name(self,new_acc):
+    self.name = new_acc
+    print(f"New Name: {self.name}")
+    print("Your account name has been changed.")
+  def transfer(self, money):
+    self.balance -= money
+    print(f"New Balance: {self.balance} THB")
+    print("Transfer successfully.")
+  def withdraw(self,draw):
+    self.balance -= draw
+    print(f"New Balance: {self.balance} THB")
+    print("Withdraw successfully.")
+  
+  
+  scb = ATM("Guy",500)
+  scb.check_balance()
+  scb.deposit(1000)
+  scb.change_name("JJ")
+  scb.withdraw(200)
+  scb.transfer(300)
